@@ -21,9 +21,9 @@ public class PostVideoResponse {
     //}
     private Object result;
     private String url;
-    private String success;
+    private boolean success;
 
     public Object getResult(){return result;}
     public String getUrl(){return url;}
-    public String getSuccess(){return success;}
+    public boolean getSuccess(){return success;}
 }

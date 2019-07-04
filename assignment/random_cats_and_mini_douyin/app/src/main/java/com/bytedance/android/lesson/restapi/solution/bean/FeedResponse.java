@@ -10,8 +10,8 @@ public class FeedResponse {
 
     // TODO-C2 (2) Implement your FeedResponse Bean here according to the response json
     private List<Feed> feeds;
-    private String success;
+    private boolean success;
 
     public List<Feed> getFeeds(){return feeds;}
-    public String getSuccess(){return success;}
+    public boolean getSuccess(){return success;}
 }
