@@ -71,7 +71,19 @@ public class MainActivity extends AppCompatActivity {
 //        mTv.setText(s);
 
         // Retrofit
-//        Joke j = NetworkUtils.getResponseWithRetrofit();
-//        mTv.setText(j.getValue().getJoke());
+        new Thread(){
+            Joke j;
+            @Override
+            public void run() {
+                j = NetworkUtils.getResponseWithRetrofit();
+                mTv.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mTv.setText(j.getValue().getJoke());
+                    }
+                });
+            }
+        }.start();
+
     }
 }
