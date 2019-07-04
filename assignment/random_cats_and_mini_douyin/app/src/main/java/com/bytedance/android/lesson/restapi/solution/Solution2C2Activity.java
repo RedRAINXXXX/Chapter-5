@@ -179,6 +179,7 @@ public class Solution2C2Activity extends AppCompatActivity {
             @Override
                 public void onFailure(Call<PostVideoResponse> call, Throwable t) {
                 Toast.makeText(Solution2C2Activity.this, "Upload Fail!", Toast.LENGTH_SHORT).show();
+
             }
         });
 
